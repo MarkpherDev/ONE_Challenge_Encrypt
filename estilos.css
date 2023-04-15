@@ -219,3 +219,53 @@ a:hover {
 .ocultar {
   display: none;
 }
+
+@media only screen and (max-width: 768px) {
+  body {
+    font-size: 24px;
+  }
+
+  main {
+    flex-direction: column;
+    height: auto;
+  }
+
+  section {
+    width: 100%;
+  }
+
+  .seccion1 {
+    width: 100%;
+  }
+
+  .btn-encriptar,
+  .btn-desencriptar {
+    width: 50%;
+    margin: 10px 0;
+  }
+
+  .seccion2 {
+    width: 90%;
+    margin: auto;
+  }
+
+  .contenedor-botones {
+    margin: auto;
+  }
+
+  .contenedor-munieco {
+    padding-top: 50px;
+  }
+
+  .contenedor-resultado {
+    height: auto;
+  }
+
+  .btn-copiar {
+    margin: 20px auto 0px auto;
+  }
+
+  .contenedor-textominusculas {
+    margin-left: 0px;
+  }
+}

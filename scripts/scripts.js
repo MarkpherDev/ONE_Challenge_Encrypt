@@ -7,6 +7,11 @@ const parrafo = document.querySelector(".contenedor-texto");
 const resultado = document.querySelector(".texto-resultado");
 const texto = document.querySelector(".area");
 
+const MENSAJES = {
+  VACIO: "",
+  COPIADO: "Mensaje Copiado al Portapapeles",
+};
+
 const valores = {
   e: "enter",
   i: "imes",
@@ -21,7 +26,7 @@ botonCopiar.onclick = copiarTexto;
 
 function encriptar() {
   let mensaje = recuperarTexto();
-  if (mensaje === "") {
+  if (mensaje === MENSAJES.VACIO) {
     removerOcultar();
   } else ocultarDerecha();
   resultado.textContent = encriptarTexto(mensaje);
@@ -29,7 +34,7 @@ function encriptar() {
 
 function desencriptar() {
   let mensaje = recuperarTexto();
-  if (mensaje === "") {
+  if (mensaje === MENSAJES.VACIO) {
     removerOcultar();
   } else ocultarDerecha();
   resultado.textContent = desencriptarTexto(mensaje);
@@ -64,7 +69,7 @@ function desencriptarTexto(texto) {
 
 function copiarTexto() {
   navigator.clipboard.writeText(resultado.innerHTML);
-  alert("Mensaje Copiado al Portapapeles");
+  alert(MENSAJES.COPIADO);
 }
 
 function ocultarDerecha() {

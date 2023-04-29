@@ -66,6 +66,7 @@ main {
   outline-style: none;
   background-color: var(--dark-green-2);
   border-radius: 15px;
+  text-transform: lowercase;
   /* overflow: auto; */
 }
 

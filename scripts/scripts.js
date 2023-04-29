@@ -25,11 +25,17 @@ botonDesencriptar.onclick = desencriptar;
 botonCopiar.onclick = copiarTexto;
 
 function encriptar() {
+  const removeAccents = (str) => {
+    return str.normalize("NFD").replace(/[\u0300-\u036f]/g, "");
+  };
   let mensaje = recuperarTexto();
-  if (mensaje === MENSAJE.VACIO) {
+
+  let texto = removeAccents(mensaje);
+
+  if (texto === MENSAJE.VACIO) {
     removerOcultar();
   } else ocultarDerecha();
-  resultado.textContent = encriptarTexto(mensaje);
+  resultado.textContent = encriptarTexto(texto);
 }
 
 function desencriptar() {

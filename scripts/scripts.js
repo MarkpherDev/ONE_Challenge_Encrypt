@@ -7,7 +7,7 @@ const parrafo = document.querySelector(".contenedor-texto");
 const resultado = document.querySelector(".texto-resultado");
 const texto = document.querySelector(".area");
 
-const MENSAJES = {
+const MENSAJE = {
   VACIO: "",
   COPIADO: "Mensaje Copiado al Portapapeles",
 };
@@ -26,7 +26,7 @@ botonCopiar.onclick = copiarTexto;
 
 function encriptar() {
   let mensaje = recuperarTexto();
-  if (mensaje === MENSAJES.VACIO) {
+  if (mensaje === MENSAJE.VACIO) {
     removerOcultar();
   } else ocultarDerecha();
   resultado.textContent = encriptarTexto(mensaje);
@@ -34,7 +34,7 @@ function encriptar() {
 
 function desencriptar() {
   let mensaje = recuperarTexto();
-  if (mensaje === MENSAJES.VACIO) {
+  if (mensaje === MENSAJE.VACIO) {
     removerOcultar();
   } else ocultarDerecha();
   resultado.textContent = desencriptarTexto(mensaje);
@@ -69,17 +69,19 @@ function desencriptarTexto(texto) {
 
 function copiarTexto() {
   navigator.clipboard.writeText(resultado.innerHTML);
-  alert(MENSAJES.COPIADO);
+  alert(MENSAJE.COPIADO);
 }
 
 function ocultarDerecha() {
   munieco.classList.add("ocultar");
   h3.classList.add("ocultar");
   parrafo.classList.add("ocultar");
+  botonCopiar.classList.remove("ocultar");
 }
 
 function removerOcultar() {
   munieco.classList.remove("ocultar");
   h3.classList.remove("ocultar");
   parrafo.classList.remove("ocultar");
+  botonCopiar.classList.add("ocultar");
 }

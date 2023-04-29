@@ -1,0 +1,248 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@500&family=Open+Sans:ital,wght@0,800;1,700&display=swap");
+
+:root {
+  --dark-green-1: #042326;
+  --dark-green-2: #0a3a40;
+  --dark-green-3: #0f5959;
+  --dark-green-4: #1d7373;
+  --dark-green-5: #107361;
+  --letra: #2bfff2;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-size: 62.5%;
+  font-family: "Montserrat", sans-serif;
+  font-family: "Open Sans", sans-serif;
+  background: var(--dark-green-1);
+  color: var(--letra);
+  box-sizing: border-box;
+}
+
+header {
+  display: flex;
+  align-items: center;
+  height: 5rem;
+}
+
+.logo {
+  width: 10rem;
+  height: 2.5rem;
+}
+
+.texto-header {
+  font-size: 1.5rem;
+}
+
+.texto-header a {
+  text-decoration: none;
+}
+
+.texto-header a:hover {
+  color: #ffffff;
+}
+
+main {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.seccion1 {
+  margin: 2rem 2rem 2rem;
+  width: 200rem;
+}
+
+.seccion1 textarea {
+  background-color: var(--dark-green-1);
+  color: var(--letra);
+  padding: 2rem;
+  font-size: 2.5rem;
+  width: 100%;
+  resize: none;
+  border: 0;
+  outline: none;
+  outline-style: none;
+  background-color: var(--dark-green-2);
+  border-radius: 15px;
+  /* overflow: auto; */
+}
+
+.contenedor-textominusculas {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  font-size: 1rem;
+  margin: 0.5rem;
+}
+
+.contenedor-textominusculas img {
+  height: 2 rem;
+  width: 1rem;
+  margin: 0 1rem;
+}
+
+.contenedor-botones {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 2rem auto;
+}
+
+.btn-encriptar,
+.btn-desencriptar {
+  width: 100%;
+  height: 2.5rem;
+  margin: 0 2rem;
+  font-size: 1.5rem;
+  border-radius: 15px;
+  text-align: center;
+  color: var(--letra);
+  background-color: var(--dark-green-5);
+  border: none;
+  text-transform: uppercase;
+}
+
+.btn-desencriptar:hover,
+.btn-encriptar:hover {
+  background-color: #0f5959;
+  cursor: pointer;
+  transition: 0.5s;
+}
+
+.seccion2 {
+  width: 100%;
+  /* height: 45rem; */
+  margin: 0 5rem 2rem;
+  font-size: 1.5rem;
+}
+
+.contenedor-contenido {
+  width: 25rem;
+  height: 45rem;
+  padding: 1rem;
+  border-radius: 15px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  text-align: center;
+  border: solid;
+}
+
+.contenedor-munieco,
+.contenedor-h3,
+.contenedor-texto {
+  margin: 1rem 0;
+}
+
+.contenedor-contenido input {
+  margin: 1.5rem auto;
+}
+
+.contenedor-resultado {
+  /*border: solid;*/
+  padding: 1rem;
+  height: 50%;
+}
+
+#texto-resultado {
+  text-align: start;
+  overflow-wrap: break-word;
+}
+
+.btn-copiar {
+  width: 100%;
+  height: 2.5rem;
+  margin: 0;
+  font-size: 1.5rem;
+  border-radius: 15px;
+  text-align: center;
+  color: var(--letra);
+  background-color: var(--dark-green-5);
+  border: none;
+  text-transform: uppercase;
+}
+
+.btn-copiar:hover {
+  background-color: #0f5959;
+  cursor: pointer;
+  transition: 0.5s;
+}
+
+.ocultar {
+  display: none;
+}
+
+@media screen and (max-width: 1050px) {
+  main {
+    flex-direction: column;
+  }
+  .seccion1 {
+    width: auto;
+    height: auto;
+    margin: 0 auto;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .seccion1 textarea {
+    width: auto;
+    height: auto;
+    margin: 0 auto;
+    font-size: 1.5rem;
+  }
+
+  .contenedor-ingreso {
+    width: auto;
+    margin: auto;
+  }
+
+  .seccion2 {
+    width: auto;
+    height: auto;
+    margin: 0 auto;
+  }
+}
+
+@media screen and (max-width: 375px) {
+  main {
+    flex-direction: column;
+  }
+
+  .seccion1 {
+    width: 375px;
+    height: 100%;
+    margin: 0 auto;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .seccion1 textarea {
+    width: 280px;
+    height: auto;
+    margin: 0 1rem;
+    font-size: 1.5rem;
+  }
+
+  .contenedor-botones {
+    flex-direction: column;
+    margin: auto;
+    width: 300px;
+  }
+
+  .btn-encriptar,
+  .btn-desencriptar {
+    margin: 1rem auto;
+  }
+
+  .contenedor-contenido {
+    width: 250px;
+    margin-bottom: 2rem;
+  }
+
+  .contenedor-munieco img {
+    width: 100%;
+  }
+}

@@ -69,7 +69,26 @@ function desencriptarTexto(texto) {
 
 function copiarTexto() {
   navigator.clipboard.writeText(resultado.innerHTML);
-  alert(MENSAJE.COPIADO);
+
+  const Toast = Swal.mixin({
+    toast: true,
+    position: "top-end",
+    showConfirmButton: false,
+    timer: 3000,
+    timerProgressBar: true,
+    didOpen: (toast) => {
+      toast.addEventListener("mouseenter", Swal.stopTimer);
+      toast.addEventListener("mouseleave", Swal.resumeTimer);
+    },
+  });
+
+  Toast.fire({
+    icon: "success",
+    title: "Signed in successfully",
+  });
+  // if (texto.value !== MENSAJE.VACIO) {
+  //   navigator.clipboard.writeText(resultado.innerHTML);
+  // } else alert("x");
 }
 
 function ocultarDerecha() {

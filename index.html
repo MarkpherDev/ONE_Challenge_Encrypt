@@ -5,45 +5,55 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="estilos/normalize.css">
-  <link rel="stylesheet" href="estilos/style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Dosis:wght@300&family=Montserrat:wght@500&family=Open+Sans:ital,wght@0,800;1,700&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="styles/reset.css">
+  <link rel="stylesheet" href="styles/style.css">
   <title>Encriptador</title>
 </head>
 
 <body>
   <header>
-    <img class="logo" src="imagenes/Logo.png" alt="imagen de alura">
-    <p class="texto-header">creado por <a href="https://www.linkedin.com/in/martinchris-palomino/">Martin
-        Palomino</a>
-    </p>
+    <div class="contenedor-header">
+      <img class="logo" src="images/Logo.png" alt="imagen de alura">
+      <p>Challenge ONE Encriptador - Desencriptador</p>
+      <div class="contenedor-header-imagenes">
+        <a href="https://github.com/MartinChristopherPC"><img class="imagen-header" src="images/github.png"
+            alt="GitHub"></a>
+        <a href="https://www.linkedin.com/in/martinchris-palomino/">
+          <img class="imagen-header" src="images/linkedin.png" alt="linkedin">
+        </a>
+      </div>
+    </div>
   </header>
   <main>
-    <section class="seccion1">
-      <div class="contendor-ingreso">
-        <textarea class="area" placeholder="Ingrese el texto aqui" name="" id="" cols="40" rows="12"></textarea>
-        <div class="contenedor-textominusculas">
-          <img src="imagenes/Vector.png" alt="vector">
-          <p>Solo letras minusculas y sin acentos</p>
-        </div>
-        <div class="contenedor-botones">
-          <input type="button" class="btn-encriptar" value="encriptar">
-          <input type="button" class="btn-desencriptar" value="desencriptar">
-        </div>
+    <section class="Seccion-TextArea">
+      <textarea class="area" placeholder="Ingrese el texto aqui" name="" id="" cols="40" rows="12"></textarea>
+      <div class="contenedor-textominusculas">
+        <img src="images/Vector.png" alt="vector">
+        <p>Solo letras minusculas y sin acentos</p>
+      </div>
+      <div class="contenedor-botones">
+        <input type="button" class="btn-encriptar" value="encriptar">
+        <input type="button" class="btn-desencriptar" value="desencriptar">
       </div>
     </section>
-    <section class="seccion2">
+    <section class="Seccion-Resultado">
       <div class="contenedor-contenido">
         <div class="contenedor-munieco">
-          <img src="imagenes/Muñeco.png" alt="muñeco de alura">
+          <img src="images/Muñeco.png" alt="muñeco de alura">
         </div>
-        <div class="contenedor-h3">
+        <div class="contenedor-mensaje">
           <h3>Ningun mensaje fue encontrado</h3>
         </div>
         <div class="contenedor-texto">
           <p>Ingresa el texto que deseas encriptar o desencriptar</p>
         </div>
         <div class="contenedor-resultado">
-          <p class="texto-resultado" id="texto-resultado"></p>
+          <p class="texto-resultado"></p>
         </div>
         <div class="contenedor-copiar">
           <input type="button" class="btn-copiar ocultar" value="copiar">
@@ -51,10 +61,12 @@
       </div>
     </section>
   </main>
-  <script src="scripts/scripts.js"></script>
+  <footer>
+    <p class="texto-footer">Developed by:<span>Martin Palomino</span></p>
+  </footer>
+  <script src="scripts/app.js"></script>
   <link href="https://cdn.jsdelivr.net/npm/@sweetalert2/theme-dark@4/dark.css" rel="stylesheet">
   <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.js"></script>
-  <!-- <script src="sweetalert2.all.min.js"></script> -->
 </body>
 
 </html>

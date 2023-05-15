@@ -30,23 +30,33 @@ footer {
   font-family: var(--fuenteHeading);
 }
 
+footer {
+  padding-top: 0.9rem;
+}
+
 header .contenedor-header {
   display: flex;
   justify-content: space-between;
   align-items: center;
   height: auto;
-  margin-right: 2rem;
+  margin: 0.5rem 1rem;
 }
 
 header a {
   margin-left: 1rem;
 }
 
-header p,
-footer p {
+header p {
   font-size: 1.5rem;
   font-weight: bold;
   text-align: center;
+}
+
+footer p {
+  font-size: 1rem;
+  font-weight: bold;
+  text-align: center;
+  opacity: 0.5;
 }
 
 footer span {
@@ -60,7 +70,7 @@ header .imagen-header {
 main {
   background-color: var(--colorFondo);
   font-family: var(--fuenteParrafos);
-  height: 898px;
+  height: 870px;
   width: auto;
   display: flex;
   justify-content: center;
@@ -174,6 +184,8 @@ input:hover {
   }
   header .contenedor-header {
     flex-direction: column;
+    gap: 1rem;
+    margin: 1rem auto;
   }
 }
 
@@ -184,7 +196,8 @@ input:hover {
 
   .contenedor-botones {
     flex-direction: column;
-    height: 5rem;
+    width: 90%;
+    height: auto;
   }
 
   .contenedor-botones input {

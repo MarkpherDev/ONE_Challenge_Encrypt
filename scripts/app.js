@@ -9,6 +9,9 @@ const containerMensaje = document.querySelector(".contenedor-mensaje");
 const containerTexto = document.querySelector(".contenedor-texto");
 const resultado = document.querySelector(".texto-resultado");
 const inputText = document.querySelector(".area");
+const botonlimpiar = document.querySelector(".btn-limpiar");
+
+const permitidos = /^[a-zñ\s]+$/;
 
 const MENSAJE = {
   VACIO: "",
@@ -111,6 +114,7 @@ botonDesencriptar.addEventListener("click", () => {
   } else addOcultar();
   resultado.textContent = desencriptarTexto(texto);
 });
+
 botonCopiar.addEventListener("click", () => {
   let copyMessage = "";
   copyMessage = document.querySelector(".texto-resultado").innerHTML;
@@ -118,4 +122,18 @@ botonCopiar.addEventListener("click", () => {
   document.querySelector(".area").value = copyMessage;
   console.log(copyMessage);
   alertaMensajeCopiado();
+});
+
+botonlimpiar.addEventListener("click", () => {
+  document.querySelector(".area").value = "";
+  removeOcultar();
+});
+
+/**
+ * TODO verificar
+ */
+inputText.addEventListener("keypress", (event) => {
+  if (event.key.match(permitidos) === null) {
+    event.preventDefault();
+  }
 });
